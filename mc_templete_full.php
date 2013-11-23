@@ -690,7 +690,7 @@
     }
     /*end of all function and class*/
     
-    /*
+    /**
     * callImage
     * wrap for all above class with auto cache
     * @Auther : mmis1000
