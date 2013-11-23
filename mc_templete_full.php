@@ -127,10 +127,12 @@
                 stream_set_timeout($this->Socket, $Timeout);
                 /* Make handshake and request server status */
                 $Data = $this->Send(self::STATUS, pack('N', $this->Send(self::HANDSHAKE)).pack('c*', 0x00, 0x00, 0x00, 0x00));
-                $ping = round((microtime(true)-$startTime)*1000);/*addtion ping code by mmis1000*/
+                $ping = round((microtime(true)-$startTime)*1000);
+                /*addtion ping code by mmis1000*/
                 //set_time_limit($met);
                 /*change them to here for the host only support tcp stream*/
             } else {
+                @fclose($this->Socket);
                 $Data = false;
             }
 
@@ -139,20 +141,21 @@
                 if(!class_exists('MinecraftServerStatusSimple') && file_exists('MinecraftServerStatusSimple.class.php'))
                     require_once('MinecraftServerStatusSimple.class.php');
                 if(class_exists('MinecraftServerStatusSimple')) {
-                        $Fallback = new MinecraftServerStatusSimple($Host, $Port, $Timeout);
-                        $this->Info = array(
-                            'hostname' => $Fallback->Get('hostname'),
-                            'numplayers' => $Fallback->Get('numplayers'),
-                            'maxplayers' => $Fallback->Get('maxplayers'),
-                            'version' => $Fallback->Get('version'),/*modified by mmis1000; add hook for mc version*/
-                            'hostport' => (int)$Port,
-                            'hostip' => $Host,
-                            'ping' => $Fallback->Get('ping'),/*addtion ping code by mmis1000*/
-                            'online' => $Fallback->Get('online')
-                        ); fclose($this->Socket); return;
+                    $Fallback = new MinecraftServerStatusSimple($Host, $Port, $Timeout);
+                    $this->Info = array(
+                        'hostname' => $Fallback->Get('hostname'),
+                        'numplayers' => $Fallback->Get('numplayers'),
+                        'maxplayers' => $Fallback->Get('maxplayers'),
+                        'version' => $Fallback->Get('version'),/*modified by mmis1000; add hook for mc version*/
+                        'hostport' => (int)$Port,
+                        'hostip' => $Host,
+                        'ping' => $Fallback->Get('ping'),/*addtion ping code by mmis1000*/
+                        'online' => $Fallback->Get('online')
+                    );
+                    return;
                 } else {
-                            $this->Info['online'] = false;
-                            return;
+                    $this->Info['online'] = false;
+                    return;
                 }
             }
             /* Prepare the data for parsing */
