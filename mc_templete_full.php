@@ -768,7 +768,7 @@
     };
     
     //$ip = 'meepcraft.com';
-    $default = 'bahablackbox.no-ip.org';
+    $default = '127.0.0.1';
     $ip = isset($_GET['ip']) ? preg_replace('/[^\da-zA-Z\.]/', "", $_GET['ip']) : $default;
     $folder = 'statusCache/';
     
