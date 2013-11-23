@@ -8,5 +8,12 @@ require :
         tcp
     php gd2 module enabled
 
+look at the end of mc_templete_full.php for more information
 you could also register you own config set/ templete
 on the end of mc_templete_full.php
+
+Special thanks :
+    Patrick K. - http://www.silexboard.org/ - https://github.com/NoxNebula
+    Julian Spravil <julian.spr@t-online.de> https://github.com/FunnyItsElmo
+    Pc Chou - http://home.gamer.com.tw/homeindex.php?owner=pcchou
+     

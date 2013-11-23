@@ -192,7 +192,7 @@
             $this->Info['numplayers'] = (int)$this->Info['numplayers'];
             $this->Info['maxplayers'] = (int)$this->Info['maxplayers'];
             $this->Info['hostport'] = (int)$this->Info['hostport'];
-            $this->Info['ping'] = $ping;/*addtion ping code by mmis1000*/
+            $this->Info['ping'] = $ping;/*addtional ping code by mmis1000*/
 
             $this->Info['online'] = true;
             /* Close the connection */
