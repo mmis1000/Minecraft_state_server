@@ -1,7 +1,7 @@
 A simple server to trace many mc server states at same time
 
 require : 
-    a usable font file
+    a usable font file for php gd2 module
     php version 5.3+ (not tested with 5.2 beyond)
     php stream_socket_client with following stream type registered
         udp(for query feature, optional)
