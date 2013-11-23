@@ -1,4 +1,5 @@
-A simple server to trace many mc server states at same time
+A php class to generate status image base on given status array
+    external class embeded
 
 require : 
     a usable font file for php gd2 module
