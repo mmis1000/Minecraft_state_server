@@ -1,5 +1,6 @@
 <?php
-    $status_dark_set = array (
+    /*optional config set*/
+    $status_set_dark = array (
         'sizeX' => 320,
         'sizeY' => 80,
         'online' => array(

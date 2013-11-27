@@ -1,6 +1,6 @@
 <?php
-        /*optional config set*/
-    $status_bf4_set = array (
+    /*optional config set*/
+    $status_set_bf4 = array (
         'sizeX' => 400,
         'sizeY' => 100,
         'online' => array(
