@@ -24,4 +24,4 @@
     $fontFile = 'midcirc.ttf';
     $expire_after_create = 1800;
     
-    status_callImage($ip, $folder, $fontFile, $templete, $config_set, $expire_after_create, $status_modifier_default);
+    status_callImage($ip, $folder, $fontFile, $templete, $config_set, $expire_after_create, $status_modifier);
