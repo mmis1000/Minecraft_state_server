@@ -9,9 +9,8 @@ require :
         tcp
     php gd2 module enabled
 
-look at the end of mc_templete_full.php for more information
-you could also register you own config set/ templete
-on the end of mc_templete_full.php
+you could also register you own config set / templete
+look at the test_mc_status.php for usage / more information
 
 Special thanks :
     Patrick K. - http://www.silexboard.org/ - https://github.com/NoxNebula
