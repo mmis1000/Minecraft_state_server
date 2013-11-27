@@ -38,6 +38,7 @@
             $imagemaker -> getPng($state, $font, $templete, $path);//redirect output to a file
             
             $file_time = @filemtime($path);//reload file time
+            header("Cache-Control:no-cache");
             /*$last_modified_time = $file_time;
             $etag = base64_encode($ip);
             header("Last-Modified: ".gmdate("D, d M Y H:i:s", $last_modified_time)." GMT");
